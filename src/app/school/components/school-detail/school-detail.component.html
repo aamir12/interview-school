@@ -1,0 +1,13 @@
+<mat-dialog-content>
+ 
+  <div *ngIf="data$ | async as data">
+    <h2> {{ data.school_name }}</h2>
+    <p>Math : {{ data.sat_math_avg_score }}</p>
+    <p>Reading : {{ data.sat_critical_reading_avg_score }}</p>
+    <p>Writing : {{ data.sat_writing_avg_score }}</p>
+  </div>
+  
+</mat-dialog-content>
+<mat-dialog-actions [align]="'end'">
+  <button mat-button (click)="onNoClick()">Close</button>
+</mat-dialog-actions>

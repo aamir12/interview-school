@@ -1,0 +1,31 @@
+<div *ngIf="data$ | async as schools" class="container">
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let school of schools">
+          <td scope="row">{{ school.school_name }}</td>
+          <td>
+            <button
+              type="button"
+              (click)="schoolDetail(school)"
+              class="btn btn-primary btn-sm"
+            >
+              Detail
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
